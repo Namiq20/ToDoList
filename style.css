@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Georgian:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.yellow {
+    height: 27px;
+    background-color: #FFDC40;
+}
+
+h2 {
+    margin: auto;
+    padding-top: 13px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container {
+    padding: 20px 22px 0 28px;
+}
+
+.main-input {
+    width: 21.2%;
+    height: 40px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 25px;
+    position: absolute;
+}
+
+.input-delete-btn {
+    position: relative;
+    top: 10px;
+    left: 82.5%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.buttons {
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 19px;
+    width: 40%;
+    position: relative;
+}
+
+.btn {
+    width: 100%;
+    height: 44px;
+    background: #833AE0;
+    outline: none;
+    border: none;
+    border-radius: 71px;
+    color: #FFFFFF;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    line-height: 16px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.plus-btn {
+    width: 42px;
+    height: 44px;
+    border-radius: 71px;
+    background: #9953F1;
+    outline: none;
+    border: none;
+    color: FFFFFF;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    user-select: none;
+}
+
+.doList {
+    display: none;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.task {
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding: 12px 25px 12px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clears {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    background-color: white;
+}
+
+.sort {
+    width: 95%;
+    padding-bottom: 12px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.searchinput {
+    display: none;
+    outline: none;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 18px;
+    width: 80%;
+
+}
+
+.searchiconn {
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.searchdivv {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 80%;
+    margin-left: 10px;
+}
+
+p {
+    font-family: Roboto;
+    margin-top: 30px;
+    background-color: #ebebeb;
+    display: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.previuos-delete-btn:hover {
+    content: url(/images/Group\ 70.png);
+}
+
+.previuos-delete-btn2:hover {
+    content: url(/images/Group\ 70.png);
+}
+
+.new-input {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding: 12px 25px 12px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    form {
+        width: 50%;
+    }
+    h2 {
+        font-size: 23px;
+    }
+    .container {
+        padding: 10px 11px 0 14px;
+    }
+    .main-input {
+        width: 44.2%;
+        height: 40px;
+        padding-left: 15px;
+    }
+
+}
