@@ -178,11 +178,11 @@ p {
 }
 
 .previuos-delete-btn:hover {
-    content: url(/images/Group\ 70.png);
+    content: url(./images/purple.png);
 }
 
 .previuos-delete-btn2:hover {
-    content: url(/images/Group\ 70.png);
+    content: url(./images/purple.png);
 }
 
 .new-input {
@@ -203,6 +203,17 @@ p {
     display: flex;
     justify-content: space-between;
 }
+
+.uppBtn {
+    display: none;
+    border: none;
+    background-color: #FFFFFF;
+}
+.sortBtn {
+    border: none;
+    background-color: #FFFFFF; 
+}
+
 
 @media (min-width: 300px) and (max-width: 600px) {
     form {

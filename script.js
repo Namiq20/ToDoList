@@ -9,7 +9,8 @@ const current_delete_btn = document.querySelector('.current-delete-btn');
 const searchinput = document.querySelector('.searchinput');
 const searchiconn = document.querySelector('.searchiconn');
 const sort = document.querySelector('.sort');
-const sort1 = document.querySelector('.sort1');
+const sortBtn = document.querySelector('.sortBtn');
+const uppBtn = document.querySelector('.uppBtn');
 let items;
 
 // load items
@@ -74,7 +75,7 @@ function createItem(text) {
     }
     const dButton = document.createElement('button');
     dButton.className = 'clears';
-    dButton.innerHTML = '<img src="/images/Group 56.png" alt="x isaresi" class="previuos-delete-btn2">'
+    dButton.innerHTML = '<img src="./images/delete.png" alt="x isaresi" class="previuos-delete-btn2">'
     div.appendChild(dButton);
 }
 
@@ -174,7 +175,7 @@ searchiconn.addEventListener('dblclick', () => {
 
 
 // sort elements
-sort1.addEventListener('click', () => {
+sortBtn.addEventListener('click', () => {
 
     let data = getItemsFromLS();
     let old = [...data];
@@ -191,22 +192,15 @@ sort1.addEventListener('click', () => {
             createItem(item);
         })
     }
-
-    if (sort1.src == 'http://127.0.0.1:5500/images/Group%2038.png') {
-
-
-
-        sort1.src = 'http://127.0.0.1:5500/images/Group%2090.png';
-
-        funcSort();
-
-    } else if (sort1.src == 'http://127.0.0.1:5500/images/Group%2090.png') {
-
-        sort1.src = 'http://127.0.0.1:5500/images/Group%2038.png';
-
-        let newOld = [...data];
-        console.log(newOld);
-        newOld.forEach(item => {
+    funcSort();
+    uppBtn.style.display = 'block';
+    sortBtn.style.display = 'none';
+})
+uppBtn.addEventListener('click', () => {
+    let data = getItemsFromLS();
+    let old = [...data];
+    let funcSort = () => {
+        old.forEach(item => {
             deleteItemFromLS(item);
         })
         data.reverse();
@@ -217,35 +211,17 @@ sort1.addEventListener('click', () => {
         data.forEach(item => {
             createItem(item);
         })
-
     }
-
-
-
-
+    funcSort();
+    sortBtn.style.display = 'block';
+    uppBtn.style.display = 'none';
 })
-
-
-
-
 
 
 input_delete_btn.addEventListener('click', () => {
     input.style.display = 'none';
     input_delete_btn.style.display = 'none';
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 plusBtn.addEventListener('click', () => {
